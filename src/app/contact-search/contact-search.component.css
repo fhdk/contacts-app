@@ -1,0 +1,17 @@
+.search-result {
+  /*border-bottom: 0.5px solid lightgrey;*/
+  /*border-left: 0.5px solid lightgrey;*/
+  /*border-right: 0.5px solid lightgrey;*/
+  background-color: lightgoldenrodyellow;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 40px;
+  padding: 5px;
+  width: 350px;
+}
+
+#search-box {
+  width: 350px;
+}

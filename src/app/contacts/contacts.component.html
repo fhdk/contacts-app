@@ -1,0 +1,22 @@
+<div class="row">
+  <div class="col-md-10">
+    <table class="table table-sm table-responsive">
+      <thead>
+      <tr>
+        <th></th>
+        <th>Navn</th>
+        <th>Mobil</th>
+      </tr>
+      </thead>
+      <tr *ngFor="let contact of contacts" (click)="onSelect(contact)" [class.selected]="contact === selectedContact">
+        <th scope="row">
+          <button type="button" class="btn btn-outline-info" (click)="gotoDetail(contact)"><i class="fa fa-info"></i>
+          </button>
+        </th>
+        <td>{{fullName(contact)}}</td>
+        <td><span *ngIf="contact.mobile"><a role="button" class="btn btn-outline-primary" href="tel:{{contact.mobile}}">{{contact.mobile}}</a></span>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>

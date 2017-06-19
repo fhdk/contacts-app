@@ -1,0 +1,17 @@
+<div class="ui raised segment">
+  <h4 class="ui horizontal dividing header">Nyt visitkort</h4>
+  <div class="ui form">
+    <div class="fields">
+      <div class="ui input field">
+        <input #vcardFirstName type="text" placeholder="fornavn">
+      </div>
+      <div class="ui input field">
+        <input #vcardLastName type="text" placeholder="efternavn">
+      </div>
+      <button class="ui right floated button"
+              (click)="add(vcardFirstName.value, vcardLastName.value); vcardFirstName.value='';  vcardLastName.value='';">
+        <i class="add user icon"></i>
+      </button>
+    </div>
+  </div>
+</div>

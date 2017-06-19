@@ -1,0 +1,57 @@
+<div *ngIf="contact">
+  <div class="card">
+    <img class="card-img-top"/>
+    <h3 class="card-header">{{fullName(contact)}}</h3>
+    <div class="card-block">
+      <div class="list-group-item-heading">Telefon</div>
+      <ul class="list-group list-group-flush">
+        <li *ngIf="contact.phone" class="list-group-item">
+          <a href="tel:{{contact.phone}}">
+            <button class="btn btn-primary btn-outline-primary"><i class="fa fa-phone"></i> {{contact.phone}}</button>
+          </a>
+        </li>
+        <li *ngIf="contact.mobile" class="list-group-item text-center">
+          <a href="tel:{{contact.mobile}}">
+            <button class="btn btn-primary btn-outline-primary"><i class="fa fa-mobile-phone"></i> {{contact.mobile}}
+            </button>
+          </a>
+        </li>
+        <li *ngIf="contact.work" class="list-group-item text-center">
+          <a href="tel:{{contact.work}}">
+            <button class="btn btn-secondary btn-outline-primary"><i class="fa fa-mobile-phone"></i> {{contact.work}}
+            </button>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div *ngIf="contact.email" class="card-block">
+      <div class="list-group-item-heading">Epost</div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+          <a href="mailto:{{contact.email}}">
+            <button class="btn btn-outline-primary"><i class="mail icon"></i>{{contact.email}}</button>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="card-block">
+      <h4 class="card-title">
+        Adresse
+      </h4>
+      <p class="card-text">
+        {{streetAddress(contact)}}<br/>
+        {{postalAddress(contact)}}<br/>
+      </p>
+    </div>
+    <div class="card-block">
+      <div class="btn-group card text-center">
+        <!--<button class="basic ui button" (click)="goEdit()">-->
+        <!--<i class="big edit icon"></i>-->
+        <!--</button>-->
+        <button class="btn btn-outline-primary" (click)="goHome()">
+          <i class="fa fa-home"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,17 @@
+<div class="row">
+  <div class="col-md-10">
+    <div class="form-inline">
+      <div class="form-group">
+        <label class="sr-only" for="search-box">Søg</label>
+        <div class="input-group">
+          <div class="input-group-addon"><i class="fa fa-search"></i></div>
+          <input class="form-control" type="text" #searchBox id="search-box" (keyup)="search(searchBox.value)"
+                 placeholder="søg kontakt"/>
+        </div>
+      </div>
+    </div>
+    <div *ngFor="let contact of contacts | async" (click)="gotoDetail(contact)" class="search-result">
+      {{fullName(contact)}}
+    </div>
+  </div>
+</div>

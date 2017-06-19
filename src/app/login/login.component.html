@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="card card-container">
+    <img id="profile-img" class="profile-img-card" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png"/>
+    <p id="profile-name" class="profile-name-card"></p>
+    <form #loginForm="ngForm" class="form-signin">
+      <input placeholder="Brugernavn" class="form-control"
+             required autofocus
+             name="username" id="username-input" type="text"
+             [(ngModel)]="cred.username" #username="ngModel">
+      <div [hidden]="username.valid || username.pristine">
+        Brugernavn
+      </div>
+      <!--<br/>-->
+      <input placeholder="Adgangskode" class="form-control"
+             required
+             name="password" id="password-input" type="password"
+             [(ngModel)]="cred.password" #password="ngModel">
+      <div [hidden]="password.valid || password.pristine">
+        Adgangskode
+      </div>
+      <!--<br/>-->
+      <div class="wrapper">
+        <span class="input-group-btn">
+          <button class="btn bnt-lg btn-primary btn-block"
+                  (click)="login()" [disabled]="!loginForm.form.valid">
+            Log ind <i class="fa fa-sign-in"></i>
+          </button>
+        </span>
+        <span>{{message}}</span>
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,94 @@
+<div class="ui raised segment">
+  <div *ngIf="contact">
+    <div class="ui form">
+      <h4 class="ui dividing header">Visitkort</h4>
+      <div class="field">
+        <div class="three fields">
+          <div class="three wide field">
+            <label for="firstName">Fornavn</label>
+            <input id="firstName" type="text" [(ngModel)]="contact.firstName" placeholder="fornavn">
+          </div>
+          <div class="three wide field">
+            <label for="middleName">Mellemnavn</label>
+            <input id="middleName" type="text" [(ngModel)]="contact.middleName" placeholder="mellemnavn">
+          </div>
+          <div class="three wide field">
+            <label for="lastName">Efternavn</label>
+            <input id="lastName" type="text" [(ngModel)]="contact.lastName" placeholder="efternavn">
+          </div>
+        </div>
+      </div>
+
+      <div class="field">
+        <div class="three fields">
+          <div class="five wide field">
+            <label for="street">Vejnavn</label>
+            <input id="street" type="text" [(ngModel)]="contact.street" placeholder="vejnavn">
+          </div>
+          <div class="two wide field">
+            <label for="number">Nummer</label>
+            <input id="number" type="text" [(ngModel)]="contact.number" placeholder="nummer">
+          </div>
+          <div class="two wide field">
+            <label for="apartment">Lejlighed</label>
+            <input id="apartment" type="text" [(ngModel)]="contact.apartment" placeholder="lejlighed">
+          </div>
+        </div>
+        <div class="two fields">
+          <div class="three wide field">
+            <label for="zip">Postnr</label>
+            <input id="zip" type="text" [(ngModel)]="contact.postCode" placeholder="postnr">
+          </div>
+          <div class="six wide field">
+            <label for="city">Bynavn</label>
+            <input id="city" type="text" [(ngModel)]="contact.postOffice" placeholder="bynavn">
+          </div>
+        </div>
+      </div>
+
+      <div class="field">
+        <div class="three fields">
+          <div class="three wide field">
+            <label for="phone">Telefon</label>
+            <input id="phone" type="text" [(ngModel)]="contact.phone" placeholder="telefon">
+          </div>
+          <div class="three wide field">
+            <label for="phone">Mobil</label>
+            <input id="mobile" type="text" [(ngModel)]="contact.mobile" placeholder="mobil">
+          </div>
+          <div class="three wide field">
+            <label for="work">Arbejde</label>
+            <input id="work" type="text" [(ngModel)]="contact.work" placeholder="arbejde">
+          </div>
+        </div>
+      </div>
+
+      <div class="field">
+        <div class="fields">
+          <div class="nine wide field">
+            <label for="email">Epost adresse</label>
+            <input id="email" type="text" [(ngModel)]="contact.email" placeholder="epost adresse">
+          </div>
+        </div>
+      </div>
+
+      <div class="field">
+        <div class="fields">
+          <div class="nine wide field">
+            <div class="ui three buttons">
+              <button class="basic ui button" (click)="goSave()">
+                <i class="big save icon"></i>
+              </button>
+              <button class="basic ui button" (click)="goHome()">
+                <i class="big home icon"></i>
+              </button>
+              <button class="basic ui button" (click)="goBack()">
+                <i class="big left arrow icon"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
