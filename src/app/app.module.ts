@@ -8,14 +8,14 @@ import './shared/rxjs-extensions';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap'
 
 import { AppComponent } from './app.component';
-import {ContactsComponent} from './contacts/contacts.component';
-import {VCardSearchComponent} from './contact-search/contact-search.component';
-import {ContactDetailComponent} from './contact-detail/contact-detail.component';
-import {ContactSearchService} from './shared/contact-search.service';
-import {ContactService} from './shared/contact.service';
+import { ContactsComponent } from './contacts/contacts.component';
+import { VCardSearchComponent } from './contact-search/contact-search.component';
+import { ContactDetailComponent } from './contact-detail/contact-detail.component';
+import { ContactSearchService } from './shared/contact-search.service';
+import { ContactService } from './shared/contact.service';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import {ContactAddComponent} from './contact-add/contact-add.component';
-import {ContactEditComponent} from './contact-edit/contact-edit.component';
+import { ContactAddComponent } from './contact-add/contact-add.component';
+import { ContactEditComponent } from './contact-edit/contact-edit.component';
 import { LoginComponent } from './login/login.component';
 import { AuthGuardService } from './login/auth-guard.service';
 import { AuthService } from './login/auth.service';
@@ -49,8 +49,8 @@ import { LoginRoutingModule } from './login/login-routing.module';
     AuthGuardService,
     AuthService,
   ],
-  bootstrap: [ AppComponent ],
-  schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
+  bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule {
   constructor(router: Router) {
