@@ -47,10 +47,10 @@ export class ContactsComponent implements OnInit {
   }
 
   gotoEdit(contact: ContactModel): void {
-    this.router.navigate(['dashboard/edit', contact._id]);
+    this.router.navigate(['dashboard/edit', contact.uid]);
   }
 
   gotoDetail(contact: ContactModel): void {
-    this.router.navigate(['dashboard/detail', contact._id]);
+    this.router.navigate(['dashboard/detail', contact.uid]);
   }
 }

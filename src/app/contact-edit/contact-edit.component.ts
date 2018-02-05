@@ -30,7 +30,7 @@ export class ContactEditComponent implements OnInit {
 
   goSave(): void {
     this.contactService.update(this.contact)
-      .then(() => this.router.navigate(['dashboard/detail', this.contact._id]));
+      .then(() => this.router.navigate(['dashboard/detail', this.contact.uid]));
   }
 
   goHome(): void {

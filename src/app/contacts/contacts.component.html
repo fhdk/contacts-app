@@ -14,7 +14,11 @@
           </button>
         </th>
         <td>{{fullName(contact)}}</td>
-        <td><span *ngIf="contact.mobile"><a role="button" class="btn btn-outline-primary" href="tel:{{contact.mobile}}">{{contact.mobile}}</a></span>
+        <td>
+          <span *ngIf="contact.mobile">
+          <a role="button" class="btn btn-primary" href="tel:{{contact.mobile}}">
+            {{contact.mobile}}</a>
+          </span>
         </td>
       </tr>
     </table>

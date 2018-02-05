@@ -43,7 +43,7 @@ export class ContactDetailComponent implements OnInit {
   }
 
   goEdit(): void {
-    this.router.navigate(['dashboard/edit', this.contact._id]);
+    this.router.navigate(['dashboard/edit', this.contact.uid]);
   }
 
   // goBack(): void {

@@ -25,7 +25,7 @@ export class ContactAddComponent implements OnInit {
     }
     this.contactService.create(vc)
       .then(contact => {
-        this.router.navigate(['dashboard/edit', contact._id]);
+        this.router.navigate(['dashboard/edit', contact.uid]);
       });
   }
 }

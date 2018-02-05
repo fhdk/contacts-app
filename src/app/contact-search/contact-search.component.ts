@@ -42,7 +42,7 @@ export class VCardSearchComponent implements OnInit {
   }
 
   gotoDetail(contact: ContactModel): void {
-    const link = ['dashboard/detail', contact._id];
+    const link = ['dashboard/detail', contact.uid];
     this.router.navigate(link);
   }
 

@@ -1,4 +1,4 @@
-import {Injectable}    from '@angular/core';
+import {Injectable} from '@angular/core';
 import {Headers, Http} from '@angular/http';
 
 import 'rxjs/add/operator/toPromise';
@@ -10,6 +10,7 @@ import {ApiConfiguration} from './api-configuration.service';
 export class ContactService {
 
   private formHeaders = new Headers({'Content-Type': 'application/www-form-url-encoded'});
+
   // private jsonHeaders = new Headers({ 'Content-Type': 'application/json' });
 
   private static handleError(error: any): Promise<any> {
@@ -30,7 +31,7 @@ export class ContactService {
 
   getContact(id: string): Promise<ContactModel> {
     return this.getContacts()
-      .then(contacts => contacts.find(contact => contact._id === id));
+      .then(contacts => contacts.find(contact => contact.uid === id));
   }
 
   getContactLogin(name: string, mobile: string): Promise<ContactModel> {
@@ -67,7 +68,7 @@ export class ContactService {
   }
 
   update(contact: ContactModel): Promise<ContactModel> {
-    const url = this.config.ServerWithApiUrl + '/contacts/id/' + contact._id;
+    const url = this.config.ServerWithApiUrl + '/contacts/id/' + contact.uid;
     return this.http
       .put(url, contact, {headers: this.formHeaders})
       .toPromise()

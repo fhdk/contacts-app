@@ -6,6 +6,8 @@
 export class ContactModel {
   _id: string;
   __v: number;
+  uid: string;
+  revision: string;
   family: string;
   lastName: string;
   firstName: string;
@@ -23,6 +25,8 @@ export class ContactModel {
   constructor(c: NewContact) {
     this._id = c._id || '';
     this.__v = c.__v || 0;
+    this.uid = c.uid  || '';
+    this.revision = c.revision || '';
     this.family = c.family || '';
     this.lastName = c.lastName;
     this.firstName = c.firstName;
@@ -42,6 +46,8 @@ export class ContactModel {
 export class NewContact {
   _id?: string;
   __v?: number;
+  uid?: string;
+  revision?: string;
   family?: string;
   lastName: string;
   firstName: string;
